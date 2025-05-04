@@ -35,3 +35,4 @@ Program juga terdiri dari __5__ tabel relasional pada [kopisyop.sql](Program/kop
 <img src="Screens/db.png" style="width: 100%;"> 
 
 # Dokumentasi
+https://github.com/user-attachments/assets/591e105f-8972-424a-b3fe-93adcdb2ae85
