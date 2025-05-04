@@ -14,8 +14,8 @@ if (isset($_GET['id'])) {
     <form action="?page=karyawan" method="post" class="flex flex-col gap-4">
         <input type="hidden" name="<?=$opt . "_id"?>" value="<?php if (isset($_GET['id'])) echo $_GET['id']; ?>">
         <div class="flex flex-col gap-2">
-            <label for="karyawan" class="text-gray-700">Karyawan</label>
-            <input type="text" name="<?=$opt . "_karyawan"?>" id="karyawan" required class="border border-gray-300 rounded-md px-4 py-2"
+            <label for="nama" class="text-gray-700">Nama Karyawan</label>
+            <input type="text" name="<?=$opt . "_karyawan"?>" id="nama" required class="border border-gray-300 rounded-md px-4 py-2"
             <?php if (isset($_GET['id'])) echo "value='" . $update['nama'] . "'"; ?>>
         </div>
         <div class="flex flex-col gap-2">

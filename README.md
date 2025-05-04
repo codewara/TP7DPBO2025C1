@@ -7,10 +7,10 @@ Program terdiri dari __3__ class, yaitu `Karyawan.php`, `Menu.php`, dan `Order.p
 ```plaintext
 Kopisyop
 ├── Karyawan.php
-│   ├── addKaryawan([nama], [posisi], [gaji])
+│   ├── addKaryawan([nama], [posisi])
 │   ├── getAllKaryawan()
 │   ├── getKaryawanByID([ID])
-│   ├── updateKaryawan([ID], [nama], [posisi], [gaji])
+│   ├── updateKaryawan([ID], [nama], [posisi])
 │   ├── deleteKaryawan([ID])
 │   └── searchKaryawan([query])
 ├── Menu.php

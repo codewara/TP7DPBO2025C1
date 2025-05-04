@@ -9,13 +9,13 @@ if (isset($_GET['action']) && $_GET['action'] == 'delete') {
 }
 
 if (isset($_POST['add_karyawan'])) {
-    $karyawan->addKaryawan($_POST['new_nama'], $_POST['new_posisi'], $_POST['new_gaji']);
+    $karyawan->addKaryawan($_POST['new_karyawan'], $_POST['new_posisi']);
     header("Location: ?page=karyawan");
     exit;
 }
 
 if (isset($_POST['update_karyawan'])) {
-    $karyawan->updateKaryawan($_POST['edit_id'], $_POST['edit_nama'], $_POST['edit_posisi'], $_POST['edit_gaji']);
+    $karyawan->updateKaryawan($_POST['edit_id'], $_POST['edit_karyawan'], $_POST['edit_posisi']);
     header("Location: ?page=karyawan");
     exit;
 }

@@ -8,9 +8,9 @@ class Member {
         $this->db = (new Database())->conn;
     }
 
-    public function addKaryawan($nama, $posisi, $gaji) {
-        $stmt = $this->db->prepare("INSERT INTO karyawan (nama, posisi, gaji) VALUES (?, ?, ?)");
-        return $stmt->execute([$nama, $posisi, $gaji]);
+    public function addKaryawan($nama, $posisi) {
+        $stmt = $this->db->prepare("INSERT INTO karyawan (nama, posisi) VALUES (?, ?)");
+        return $stmt->execute([$nama, $posisi]);
     }
 
     public function getAllKaryawan() {
@@ -24,9 +24,9 @@ class Member {
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function updateKaryawan($id, $nama, $posisi, $gaji) {
-        $stmt = $this->db->prepare("UPDATE karyawan SET nama = ?, posisi = ?, gaji = ? WHERE ID = ?");
-        return $stmt->execute([$nama, $posisi, $gaji, $id]);
+    public function updateKaryawan($id, $nama, $posisi) {
+        $stmt = $this->db->prepare("UPDATE karyawan SET nama = ?, posisi = ? WHERE ID = ?");
+        return $stmt->execute([$nama, $posisi, $id]);
     }
 
     public function deleteKaryawan($id) {

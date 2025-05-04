@@ -15,8 +15,8 @@ $kategori = $menu->getAllKategori();
     <form action="?page=menu" method="post" class="flex flex-col gap-4">
         <input type="hidden" name="<?=$opt . "_id"?>" value="<?php if (isset($_GET['id'])) echo $_GET['id']; ?>">
         <div class="flex flex-col gap-2">
-            <label for="menu" class="text-gray-700">Menu</label>
-            <input type="text" name="<?=$opt . "_menu"?>" id="menu" required class="border border-gray-300 rounded-md px-4 py-2"
+            <label for="nama" class="text-gray-700">Nama Menu</label>
+            <input type="text" name="<?=$opt . "_menu"?>" id="nama" required class="border border-gray-300 rounded-md px-4 py-2"
             <?php if (isset($_GET['id'])) echo "value='" . $update['nama'] . "'"; ?>>
         </div>
         <div class="flex flex-col gap-2">
@@ -24,7 +24,7 @@ $kategori = $menu->getAllKategori();
             <select name="<?=$opt . "_kategori_ID"?>" id="kategori" required class="border border-gray-300 rounded-md px-4 py-2">
                 <option value="">Select Kategori</option>
                 <?php foreach ($kategori as $item): ?>
-                    <option value="<?php echo $item['ID']; ?>"<?php if (isset($_GET['id']) && $item['ID'] == $_GET['id']) echo "selected"; ?>
+                    <option value="<?php echo $item['ID']; ?>"<?php if (isset($_GET['id']) && $item['ID'] == $update['kategori_ID']) echo "selected"; ?>
                     ><?php echo $item['nama']; ?></option>
                 <?php endforeach; ?>
             </select>
